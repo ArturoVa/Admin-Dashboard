@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+ul li
+{
+    list-style: none;
+}
+.container.left
+{   
+    grid-column: 1/2;
+}
+.container.right
+{
+    /*Placement in the grid*/
+    grid-column: 2/3;
+
+    /*Own grid settings*/
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+.project-display
+{
+    grid-row: 1/span 2;
+}
+
+.container.right .header
+{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 3fr 1fr;
+}
+
+.container.right .content{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.card-holder
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.card{
+    box-shadow: 1px 1px grey;
+    
+}
+
+.trend
+{
+    display: flex;
+}
